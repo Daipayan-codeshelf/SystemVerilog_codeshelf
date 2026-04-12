@@ -1,0 +1,19 @@
+class sv_class;
+  int x;
+  task set(int i);
+    x=i;
+  endtask
+  
+  function int get();
+    return x;
+  endfunction
+endclass
+
+
+module tb;
+  sv_class sv=new();
+  initial begin
+    sv.set(10);
+    $display("value of x= [%0d]",sv.get());
+  end
+endmodule
