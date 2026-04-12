@@ -4,7 +4,7 @@ class sv_class;
     x=i;
   endtask
   
-  function int get();
+  function void int get();
     return x;
   endfunction
 endclass
